@@ -1,0 +1,48 @@
+table {
+  background: $white;
+  border-collapse: collapse;
+  margin: ($base-spacing / 2) 0;
+  width: 100%;
+
+  th,
+  thead > tr {
+    border-bottom: $base-border;
+    font-family: $font;
+    font-weight: bold;
+    padding: $base-spacing / 2;
+    text-align: left;
+    background: darken($grey, 10%);
+    color: $white;
+
+    td {
+      border-right: none;
+    }
+  }
+}
+
+td {
+  border-bottom: $base-border;
+  padding: $base-spacing / 2;
+}
+
+tbody {
+  padding: 0 1%;
+}
+
+tr:nth-child(even) {
+  color: $grey-dark;
+}
+
+tr:nth-child(odd) {
+  background: $grey-light;
+}
+
+td {
+  border-right: $base-border;
+}
+
+tr,
+td,
+th {
+  vertical-align: middle;
+}

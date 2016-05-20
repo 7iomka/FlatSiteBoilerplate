@@ -1,0 +1,81 @@
+// @extend %button for left-to-right hover effect
+%button {
+    transition: width 0.25s ease-in-out;
+    -webkit-font-smoothing: antialiased;
+    background: transparent;
+    border-radius: 0;
+    border: 3px solid $brand-color;
+    color: $brand-color;
+    display: inline-block;
+    font-family: $font-arial;
+    font-size: 12px;
+    line-height: 2;
+    margin: 2% 0;
+    outline: none;
+    padding: 5px 15px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    vertical-align: middle;
+    white-space: nowrap;
+
+    @include media(small) {
+        font-size: 14px;
+    }
+
+    &:after {
+        @include base-animation;
+        content: "";
+        position: absolute;
+        z-index: -1;
+        width: 0%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: $brand-color;
+    }
+
+    &:hover,
+    &:focus {
+        color: $black;
+    }
+
+    &:hover:after,
+    &:focus:after {
+        width: 100%;
+    }
+
+    &:disabled {
+        cursor: not-allowed;
+        opacity: 0.5;
+    }
+}
+
+%button-alternate {
+    @extend %button;
+    border: 3px solid $brand-color-dark;
+    color: $brand-color-dark;
+
+    &:hover,
+    &:focus {
+        color: $white;
+    }
+
+    &:after {
+        background: $brand-color-dark;
+    }
+}
+
+button,
+a.button,
+input[type="submit"] {
+    @extend %button;
+    -webkit-appearance: none;
+    user-select: none;
+}
+
+button.button-alternate,
+a.button-alternate {
+    @extend %button-alternate;
+}

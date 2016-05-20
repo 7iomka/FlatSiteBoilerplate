@@ -1,0 +1,27 @@
+footer {
+  background: $black;
+  color: $white;
+  height: 30px;
+  padding: 9px 2%;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  font-size: 12px;
+  
+  @include media(small) {
+    font-size: 14px;
+    padding: 6px 25px;
+  }
+
+  @include media(medium) { 
+      position: fixed;
+      z-index: 9999;    
+  }
+
+  a {
+    color: $white;
+    &:hover {
+      color: $brand-color;
+    }
+  }
+}

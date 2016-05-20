@@ -1,0 +1,23 @@
+// Hide stuff and use js to bring it back!
+.hidden {
+   visibility: hidden;
+}
+
+.hide {
+  display: none;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+// Font Classes 
+.thin { font-family: $font-thin !important;}
+.bold { font-family: $font-bold !important; }
+.ultra { font-family: $font-ultra !important; }
+.light { font-family: $font-light !important; }
+.lowercase { text-transform: lowercase !important; }
+.uppercase { text-transform: uppercase !important; }
+.small { font-size: 14px ;}
+.xsmall {font-size: 12px ;}
+

@@ -1,0 +1,24 @@
+header {
+  height: 50px;
+  text-align: center;
+  background: rgba($black, 0.9);
+
+  @include media(medium) { 
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 9999;
+  }
+
+  .logo {
+    @extend %logo;
+    margin: 0 auto;
+    display: block;
+    position: relative;
+    top: 11px;
+    width: 28px;
+    height: 28px;
+    background-size: 28px;
+  }
+}
